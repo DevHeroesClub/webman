@@ -7,6 +7,7 @@
                  [secretary "1.2.3"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]
+            [lein-less "1.7.5"]
             [lein-sassy "1.0.8"]]
 
   :min-lein-version "2.5.3"
@@ -18,8 +19,8 @@
 
   :figwheel {:css-dirs ["resources/public/css"]}
 
-  :sass {:src "sass"
-         :dst "resources/public/css/"}
+  :less {:source-paths ["less"]
+         :target-path  "resources/public/css"}
 
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
 
