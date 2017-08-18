@@ -1,25 +1,10 @@
 (ns lxhome.views
-  (:require [re-frame.core :as re-frame]))
+  (:require [re-frame.core :as re-frame]
+            [lxhome.views.home :as home]))
 
-
-;; home
-
-(defn home-panel []
-  (let [name (re-frame/subscribe [:name])]
-    (fn []
-      [:header {:class :header} (str "Hello from " @name ". This is the Home Page.")
-       [:div [:a {:href "#/about"} "go to About Page"]]])))
-
-
-;; about
-
-(defn about-panel []
-  (fn []
-    [:div "This is the About Page."
-     [:div [:a {:href "#/"} "go to Home Page"]]]))
-
-
-;; main
+(defn home-panel
+  []
+  (home/home-panel))
 
 (defn- panels [panel-name]
   (case panel-name
