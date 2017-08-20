@@ -9,7 +9,6 @@
 (defn- panels [panel-name]
   (case panel-name
     :home-panel [home-panel]
-    :about-panel [about-panel]
     [:div]))
 
 (defn show-panel [panel-name]
