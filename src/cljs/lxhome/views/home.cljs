@@ -45,14 +45,14 @@
   [:section {:class :menu-items}
    [:ul {:class :menu}
     [:li
-     [:a {:class "item" :href "#"}
+     [:a {:class "item" :href "http://blog.lxsameer.com/"}
       [:i {:class :icon-rss}]
       "Blog"]]
 
     [:li
-     [:a {:class "item" :href "#"}
-      [:i {:class :icon-mic}]
-      "Slides"]]
+     [:a {:class "item" :href "https://slides.com/lxsameer"}
+      [:i {:class :icon-chat}]
+      "My Talks & Slides"]]
     [:li
      [:a {:class "item" :href "#"}
       [:i {:class :icon-mic}]
@@ -62,6 +62,16 @@
      [:a {:class "item" :href "#"}
       [:i {:class :icon-key}]
       "GPG Public Key"]]
+
+    [:li
+     [:a {:class "item" :href "#"}
+      [:i {:class :icon-phone}]
+      "Contact Details"]]
+
+    [:li
+     [:a {:class "item" :href "#"}
+      [:i {:class :icon-vcard}]
+      "About Me"]]
 
     [:li
      [:a {:class "item"
