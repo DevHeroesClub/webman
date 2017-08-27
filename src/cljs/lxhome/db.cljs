@@ -1,4 +1,4 @@
 (ns lxhome.db)
 
 (def default-db
-  {:name "re-frame"})
+  {:menu-state true})

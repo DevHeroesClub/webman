@@ -11,3 +11,9 @@
  :set-active-panel
  (fn [db [_ active-panel]]
    (assoc db :active-panel active-panel)))
+
+(re-frame/reg-event-db
+ :toggle-menu
+ (fn [db [_ active-panel]]
+   (let [state (:menu-state db)]
+     (assoc db :menu-state (not state)))))
