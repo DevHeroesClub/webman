@@ -4,24 +4,32 @@
 
 (defn menu-button
   []
-  [:div {:class :menu-icon
+  [:div {:class "button naked large"
          :on-click #(js/alert "asd")}
-   "A"])
+   [:i {:class :icon-th}]])
 
 (defn nav-header
   []
   [:header {:class :header}
    [menu-button]])
 
+(defn cv-button
+  []
+  [:section {:class :CV}
+   [:a {:href "dl.lxsameer.com/SameerRahmani.pdf" :class "button default large"}
+    "Download My CV"]])
 
 
 (defn social-links
   []
   [:nav {:class :social}
    [:ul
-    [:li [:a {:href "https://twitter.com/lxsamer"} "T"]]
-    [:li [:a {:href "https://github.com/lxsamer"} "G"]]
-    [:li [:a {:href "https://medium.com/lxsamer"} "M"]]]])
+    [:li [:a {:class "button default small circle" :href "https://twitter.com/lxsamer"} [:i {:class :icon-twitter}]]]
+    [:li [:a {:class "button default small circle" :href "https://github.com/lxsamer"} [:i {:class :icon-github}]]]
+    [:li [:a {:class "button default small circle" :href "https://www.reddit.com/user/lxsameer/"} [:i {:class :icon-reddit-alien}]]]
+    [:li [:a {:class "button default small circle" :href "https://www.linkedin.com/in/lxsameer/"} [:i {:class :icon-linkedin}]]]
+    [:li [:a {:class "button default small circle" :href "https://medium.com/@lxsamer"} [:i {:class :icon-medium}]]]
+    [:li [:a {:class "button default small circle" :href "https://www.instagram.com/lxsameeer/"} [:i {:class :icon-instagram}]]]]])
 
 
 
@@ -35,12 +43,11 @@
        [:section {:class :content}
         [:div {:class :waste}]
         [:section {:class :main-content}
-         [:img {:src "images/me-1.jpg" :class :avatar :alt "Sameer Rahmani (@lxsameer) avatar"}]
-         [:h1 {:class "title"} "Sameer Rahmani"]
-         [:h2 {:class "subtitle"} "lxsameer"]
-         [social-links]
+         [:section {:class "title-header"}
+          [:img {:src "images/me-1.jpg" :class :avatar :alt "Sameer Rahmani (@lxsameer) avatar"}]
+          [:h1 {:class "title"} "Sameer" [:span {:class "last-name"} "Rahmani"]]
+          [:h2 {:class "subtitle"} "Senior Software Engineer"]
+          [cv-button]]
 
-         [:section {:class :CV}
-          [:a {:href "dl.lxsameer.com/SameerRahmani.pdf" :class "button success large"}
-           "Download My CV"]]]
+         [social-links]]
         [:div {:class :waste}]]])))
