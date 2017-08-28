@@ -16,7 +16,7 @@
 (defn cv-button
   []
   [:section {:class :CV}
-   [:a {:href "//dl.lxsameer.com/SameerRahmani.pdf" :class "button default large"}
+   [:a {:href "http://dl.lxsameer.com/CV/SameerRahmani.pdf" :class "button default large"}
     "Download My CV"]])
 
 
@@ -92,9 +92,10 @@
        [:section {:class :content}
         [:div {:class :waste}]
         [:section {:class :main-content}
-         (if (not @menu)
-           [name-and-title]
-           [menu-items])
+
+         (if @menu
+           [menu-items]
+           [name-and-title])
 
 
          [social-links]]
