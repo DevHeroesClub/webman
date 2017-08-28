@@ -1,4 +1,4 @@
 (ns lxhome.db)
 
 (def default-db
-  {:menu-state true})
+  {:menu-state false})

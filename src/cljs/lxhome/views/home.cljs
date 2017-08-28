@@ -16,7 +16,7 @@
 (defn cv-button
   []
   [:section {:class :CV}
-   [:a {:href "dl.lxsameer.com/SameerRahmani.pdf" :class "button default large"}
+   [:a {:href "//dl.lxsameer.com/SameerRahmani.pdf" :class "button default large"}
     "Download My CV"]])
 
 
@@ -72,6 +72,11 @@
      [:a {:class "item" :href "#"}
       [:i {:class :icon-vcard}]
       "About Me"]]
+
+    [:li
+     [:a {:class "item" :href "#"}
+      [:i {:class :icon-rss}]
+      "Posts Archive"]]
 
     [:li
      [:a {:class "item"
