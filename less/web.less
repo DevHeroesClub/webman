@@ -13,6 +13,7 @@
 @avatar-border: @color-4;
 @hover-text: @color-7;
 
+@import (less) "./grid.css";
 @import "./fonts.less";
 
 * {
@@ -28,22 +29,22 @@ html {
 body {
   color: @text-color;
   background-color: @background;
-  display: flex;
-  font-weight: 300;
-  flex-direction: row;
-  align-self: stretch;
-  align-items: stretch;
-  justify-content: space-around;
-  flex: 1;
+  // display: flex;
+  // font-weight: 300;
+  // flex-direction: row;
+  // align-self: stretch;
+  // align-items: stretch;
+  // justify-content: space-around;
+  // flex: 1;
   width: 100%;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
 }
 
 #app {
-  flex: 1;
-  align-self: stretch;
-  justify-content: space-around;
+  // flex: 1;
+  // align-self: stretch;
+  // justify-content: space-around;
   height: 100%;
 }
 
@@ -51,6 +52,11 @@ body {
   width: 100%;
   height: 100%;
   margin: 0
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
 }
 
 #app > div {
@@ -62,8 +68,12 @@ a {
   text-decoration: none;
 }
 
+.header {
+  padding: 1em 0 0 1em;
+}
+
+
 .menu-items, .title-header {
-  padding-top: 10em;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -71,49 +81,48 @@ a {
   align-self: center;
 }
 
-.menu-items {
-  width: 60%;
-  position: fixed;
-  padding-top: 0;
-  i {
-    padding-right: 5px;
-  }
-
-  ul {
-    list-style: none;
-    flex: 0.5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: space-between;
-    align-self: stretch;
-    background-color: @success-text;
-    color: @color-7;
-    border-radius: 3px;
-
-    li {
-      border-top: 1px solid @color-2;
-      flex: 1;
-      width: 100%;
-
-      a {
-        color: @color-7;
-        cursor: pointer;
-        display: flex;
-        flex: 1;
-        padding: 1em;
-        &:hover {
-          background-color: @color-6;
-        }
+.menu {
+  padding-top: 2em;
+  span{
+    width: auto;
+    padding: 1em;
+    text-align: center;
+    a {
+      font-size: 1.5em;
+      color: white;
+    }
+    .button {
+      display: block;
+      opacity: 0.8;
+      font-size: 1.2em;
+      i {
+        font-size: 1.8em;
+        display: block;
+      }
+      &:hover, &:focus {
       }
     }
   }
 }
 
-h1.title {
+.copyright {
+  opacity: 0.6;
+  padding-top: 2em;
+}
+
+.middle-row {
+  min-height: 100%;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.title {
   font-size: 3em;
   font-weight: 300;
   padding-top: 0.7em;
+
   span {
     font-weight: 400;
   }
@@ -144,6 +153,9 @@ h2.subtitle {
     font-size: 1.5em;
   }
 
+  &.huge {
+    font-size: 2.7em;
+  }
 
   &.success {
     background-color: @success;
@@ -165,6 +177,7 @@ h2.subtitle {
   }
 
   &.naked, &.naked:focus {
+    display: inline-flex;
     opacity: 0.5;
     transition: opacity 300ms linear;
     &:hover {
