@@ -54,7 +54,7 @@
                     :output-to       "resources/public/js/compiled/app.js"
                     :optimizations   :advanced
                     :closure-defines {goog.DEBUG false
-                                      'lxhome.views.home/version :project/version}
+                                      "lxhome.views.home.version" "0.3.0"}
                     :pretty-print    false}}
 
     {:id           "test"
