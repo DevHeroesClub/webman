@@ -1,4 +1,4 @@
-(defproject lxhome "0.3.0"
+(defproject lxhome "0.3.1"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.908"]
                  [reagent "0.8.0-alpha1"]
@@ -54,7 +54,7 @@
                     :output-to       "resources/public/js/compiled/app.js"
                     :optimizations   :advanced
                     :closure-defines {goog.DEBUG false
-                                      "lxhome.views.home.version" "0.3.0"}
+                                      "lxhome.views.home.version" "0.3.1"}
                     :pretty-print    false}}
 
     {:id           "test"
