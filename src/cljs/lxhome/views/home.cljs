@@ -58,12 +58,12 @@
 
    [:span {:class :col-xs-4}
     [:a {:class "button default"
-         :href "https://twitter.com/lxsamer"}
+         :href "https://twitter.com/lxsameer"}
      [:i {:class :icon-twitter}]
      "Twitter"]]
    [:span {:class :col-xs-4}
     [:a {:class "button default"
-         :href "https://github.com/lxsamer"}
+         :href "https://github.com/lxsameer"}
      [:i {:class :icon-github}]
      "Github"]]
    [:span {:class :col-xs-4}
@@ -76,7 +76,6 @@
          :href "https://medium.com/@lxsameer"}
      [:i {:class :icon-medium}]
      "Medium"]]
-
    [:span {:class :col-xs-4}
     [:a {:class "button default"
          :href "https://www.instagram.com/lxsameeer/"}
