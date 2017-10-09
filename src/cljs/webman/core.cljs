@@ -1,4 +1,4 @@
-(ns wenman.core
+(ns webman.core
   (:require [reagent.core :as reagent]
             [re-frame.core :as re-frame]
             [re-frisk.core :refer [enable-re-frisk!]]
