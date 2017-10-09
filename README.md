@@ -1,6 +1,7 @@
-# lxhome
+# WebMan
 
-A [re-frame](https://github.com/Day8/re-frame) application designed to ... well, that part is up to you.
+A [re-frame](https://github.com/Day8/re-frame) application designed to build different websites sharing same structure
+but different content using one build process.
 
 ## Development Mode
 

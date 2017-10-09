@@ -1,4 +1,4 @@
-(defproject lxhome "0.3.1"
+(defproject webman "0.3.1"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.908"]
                  [reagent "0.8.0-alpha1"]
@@ -38,8 +38,8 @@
   {:builds
    [{:id           "dev"
      :source-paths ["src/cljs"]
-     :figwheel     {:on-jsload "lxhome.core/mount-root"}
-     :compiler     {:main                 lxhome.core
+     :figwheel     {:on-jsload "webman.core/mount-root"}
+     :compiler     {:main                 webman.core
                     :output-to            "resources/public/js/compiled/app.js"
                     :output-dir           "resources/public/js/compiled/out"
                     :asset-path           "js/compiled/out"
@@ -50,16 +50,16 @@
 
     {:id           "min"
      :source-paths ["src/cljs"]
-     :compiler     {:main            lxhome.core
+     :compiler     {:main            webman.core
                     :output-to       "resources/public/js/compiled/app.js"
                     :optimizations   :advanced
                     :closure-defines {goog.DEBUG false
-                                      "lxhome.views.home.version" "0.3.1"}
+                                      "webman.views.home.version" "0.3.1"}
                     :pretty-print    false}}
 
     {:id           "test"
      :source-paths ["src/cljs" "test/cljs"]
-     :compiler     {:main          lxhome.runner
+     :compiler     {:main          webman.runner
                     :output-to     "resources/public/js/compiled/test.js"
                     :output-dir    "resources/public/js/compiled/test/out"
                     :optimizations :none}}
