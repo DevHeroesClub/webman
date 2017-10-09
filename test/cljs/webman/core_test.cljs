@@ -1,6 +1,6 @@
-(ns lxhome.core-test
+(ns webman.core-test
   (:require [cljs.test :refer-macros [deftest testing is]]
-            [lxhome.core :as core]))
+            [webman.core :as core]))
 
 (deftest fake-test
   (testing "fake description"
