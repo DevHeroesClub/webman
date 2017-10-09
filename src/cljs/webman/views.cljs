@@ -1,6 +1,6 @@
-(ns lxhome.views
+(ns webman.views
   (:require [re-frame.core :as re-frame]
-            [lxhome.views.home :as home]))
+            [webman.views.home :as home]))
 
 (defn home-panel
   []

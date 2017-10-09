@@ -1,6 +1,6 @@
-(ns lxhome.events
+(ns webman.events
   (:require [re-frame.core :as re-frame]
-            [lxhome.db :as db]))
+            [webman.db :as db]))
 
 (re-frame/reg-event-db
  :initialize-db

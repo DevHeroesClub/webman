@@ -1,4 +1,4 @@
-(ns lxhome.routes
+(ns webman.routes
   (:require-macros [secretary.core :refer [defroute]])
   (:import goog.History)
   (:require [secretary.core :as secretary]

@@ -1,4 +1,4 @@
-(ns lxhome.views.home
+(ns webman.views.home
   (:require [re-frame.core :as re-frame]))
 
 (goog-define version "0.1.0")

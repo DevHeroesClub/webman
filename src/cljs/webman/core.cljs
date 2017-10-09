@@ -1,12 +1,12 @@
-(ns lxhome.core
+(ns wenman.core
   (:require [reagent.core :as reagent]
             [re-frame.core :as re-frame]
             [re-frisk.core :refer [enable-re-frisk!]]
-            [lxhome.events]
-            [lxhome.subs]
-            [lxhome.routes :as routes]
-            [lxhome.views :as views]
-            [lxhome.config :as config]))
+            [webman.events]
+            [webman.subs]
+            [webman.routes :as routes]
+            [webman.views :as views]
+            [webman.config :as config]))
 
 
 (defn dev-setup []
