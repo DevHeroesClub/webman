@@ -9,4 +9,23 @@
        [:section {:class "row middle-row middle-xs"}
         [:div {:class "col-xs-12 col-md-offset-2 col-md-8 col-lg-offset-4 col-lg-4"}
          [:p @menu]
-         [:h1 config/version]]]])))
+         [:h1 ]]]])))
+;navbar using karajlug css
+(defn navbar [] 
+  [:div {} 
+    [:header {:class "kl-header"}
+      [:div {:class "container"}
+        [:nav {:class "kl-navbar"} 
+          [:ul {:class "kl-nav"}
+            [:li 
+              [:a {:href "http://google.com"} "صفحه اصلی"]
+            ]
+            [:li 
+              [:a {:href "http://google.com"} "رویداد ها"]
+            ]   
+          ]
+        ]
+      ]
+    ]
+  ]
+)

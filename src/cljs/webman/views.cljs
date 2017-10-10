@@ -5,7 +5,9 @@
 (defn home-panel
   []
   (home/home-panel))
-
+(defn navbar []
+  (home/navbar))
+  
 (defn- panels [panel-name]
   (case panel-name
     :home-panel [home-panel]
