@@ -6,14 +6,14 @@
   []
   (home/home-panel))
 (defn navbar []
-  (home/navbar))
+  (home/iranclojure-navbar))
 (defn footer []
-  (home/footer)
+  (home/iranclojure-footer)
   )
 (defn posts []
   ;should get new posts about clojure from dev heroes
 
-  (home/Posts [{:link "google.com" :title "TEST" :summary "test"}])
+  (home/iranclojure-posts [{:link "" :title "شروع" :summary "شروع با clojure"}])
 )
 (defn- panels [panel-name]
   (case panel-name

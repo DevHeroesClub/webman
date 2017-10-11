@@ -11,7 +11,7 @@
          [:p @menu]
          [:h1 ]]]])))
 ;navbar using karajlug css
-(defn navbar [] 
+(defn iranclojure-navbar [] 
   [:div {} 
     [:header {:class "kl-header"}
       [:div {:class "container"}
@@ -27,23 +27,17 @@
               [:a {:href ""} "تماس با ما"]
             ]
             [:li
-              [:a {} "مقالات"]
+              [:a {:href ""} "مقالات"]
             ]
             [:li 
-              [:a {} "میتینگ ها"]
+              [:a {:href ""} "میتینگ ها"]
             ]   
           ]
           [:div {:class "logo"}
             [:h2 {} "Clojure UserGroup"]
-            [:img {:src "images/fav.svg" :width "80px" :height "80px"}]
-          ]
-        ]
-      ]
-    ]
-  ]
-)
+            [:img {:src "images/fav.svg" :width "80px" :height "80px"}]]]]]])
 ;posts will be vector of maps
-(defn Posts [posts] 
+(defn iranclojure-posts [posts] 
   [:main 
     [:div {:class "container"}
       [:article {:class "post-content"} 
@@ -51,20 +45,13 @@
           (for [post posts]  
             [:li {:class "post"}
               [:a {:class "post" :href (:link post)} (:title post)]
-              [:p (:summary post)]
-            ]
-          )  
-        ]
-      ]
-    ]
-  ]
-)
+              [:p (:summary post)]])]]]])
 
-(defn footer []
+(defn iranclojure-footer []
   [:footer {}
-    [:section {:class "kl-sponsers"}
+    [:section {:class "kl-sponsors"}
       [:h4 "حامیان ما"]
-      [:ul {:class "sponsers"}
+      [:ul {:class "sponsors"}
         [:li 
           [:a {:href ""} 
             [:img {:src "/images/me-1.jpg"}]
@@ -72,10 +59,4 @@
         ]
         [:li 
           [:a {:href ""} 
-            [:img {:src "/images/me-1.jpg"}]
-          ]
-        ]
-      ]
-    ]
-  ]  
-)
+            [:img {:src "/images/me-1.jpg"}]]]]]])
