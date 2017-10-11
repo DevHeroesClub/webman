@@ -5,7 +5,16 @@
 (defn home-panel
   []
   (home/home-panel))
+(defn navbar []
+  (home/iranclojure-navbar))
+(defn footer []
+  (home/iranclojure-footer)
+  )
+(defn posts []
+  ;should get new posts about clojure from dev heroes
 
+  (home/iranclojure-posts [{:link "" :title "شروع" :summary "شروع با clojure"}])
+)
 (defn- panels [panel-name]
   (case panel-name
     :home-panel [home-panel]
