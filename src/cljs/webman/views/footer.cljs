@@ -1,6 +1,6 @@
-(ns webman.views.iranclojrue.footer)
-(defn iranclojure-footer []
-    [:footer {} 
+(ns webman.views.footer)
+(defn show []
+    [:footer {}
       [:section {:class "kl-sponsors"}
         [:h4 "حامیان ما"]
         [:ul {:class "sponsors"}

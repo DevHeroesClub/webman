@@ -1,19 +1,21 @@
 (ns webman.views
   (:require [re-frame.core :as re-frame]
-            [webman.views.home :as home]))
+            [webman.views.home :as home]
+            [webman.views.navbar :as navbar]
+            [webman.views.footer :as footer]
+            [webman.views.posts :as posts]))
 
 (defn home-panel
   []
   (home/home-panel))
-(defn navbar []
-  (home/iranclojure-navbar))
-(defn footer []
-  (home/iranclojure-footer)
+(defn show-navbar []
+  (navbar/show))
+(defn show-footer []
+  (footer/show)
   )
-(defn posts []
+(defn show-posts []
   ;should get new posts about clojure from dev heroes
-
-  (home/iranclojure-posts [{:link "" :title "شروع" :summary "شروع با clojure"}])
+  (posts/show [{:link "" :title "شروع" :summary "شروع با clojure"}])
 )
 (defn- panels [panel-name]
   (case panel-name

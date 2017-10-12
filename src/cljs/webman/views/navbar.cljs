@@ -1,14 +1,14 @@
-(ns webman.views.iranclojure.navbar)
-(defn iranclojure-navbar [] 
-    [:div {} 
+(ns webman.views.navbar)
+(defn show []
+    [:div {}
       [:header {:class "kl-header"}
         [:div {:class "container"}
-          [:nav {:class "kl-navbar"} 
+          [:nav {:class "kl-navbar"}
             [:ul {:class "kl-nav"}
-              [:li 
+              [:li
                 [:a {:href ""} "صفحه اصلی"]
               ]
-              [:li 
+              [:li
                 [:a {:href ""} "درباره ما"]
               ]
               [:li
@@ -17,9 +17,9 @@
               [:li
                 [:a {:href ""} "مقالات"]
               ]
-              [:li 
+              [:li
                 [:a {:href ""} "میتینگ ها"]
-              ]   
+              ]
             ]
             [:div {:class "logo"}
               [:h2 {} "Clojure UserGroup"]
