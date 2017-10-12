@@ -17,11 +17,11 @@
 
 (defn mount-root []
   (re-frame/clear-subscription-cache!)
-  (reagent/render [views/navbar]
+  (reagent/render [views/show-navbar]
                   (.getElementById js/document "nav"))
-  (reagent/render [views/posts]
+  (reagent/render [views/show-posts]
                   (.getElementById js/document "posts"))
-  (reagent/render [views/footer]
+  (reagent/render [views/show-footer]
                   (.getElementById js/document "footer")))
 
 (defn ^:export init []
