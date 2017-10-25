@@ -10,7 +10,8 @@
         [:div {:class "col-xs-12 col-md-offset-2 col-md-8 col-lg-offset-4 col-lg-4"}
          [:p @menu]
          [:h1 ]]]])))
-;navbar using karajlug css
+	 
+;;navbar using karajlug css
 (defn iranclojure-navbar [] 
   [:div {} 
     [:header {:class "kl-header"}
@@ -36,7 +37,8 @@
           [:div {:class "logo"}
             [:h2 {} "Clojure UserGroup"]
             [:img {:src "images/fav.svg" :width "80px" :height "80px"}]]]]]])
-;posts will be vector of maps
+	    
+;;posts will be vector of maps
 (defn iranclojure-posts [posts] 
   [:main 
     [:div {:class "container"}
