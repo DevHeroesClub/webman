@@ -20,13 +20,13 @@ Navigate to a clojurescript file and start a figwheel REPL with `cider-jack-in-c
 Compile css file once.
 
 ```
-lein sass once
+lein less once
 ```
 
 Automatically recompile css file on change.
 
 ```
-lein sass auto
+lein less auto
 ```
 
 ### Run application:
