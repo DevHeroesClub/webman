@@ -18,8 +18,7 @@
   []
   (re-frame/dispatch [:fetch-topics])
   (let [topics   (re-frame/subscribe [:topics])]
-
     [:div
      [:h1 "Latest news"]
-     [:article
+     [:article {:className "news"}
       [topic-list @topics]]]))

@@ -18,5 +18,6 @@
     (fn []
       [:div {:className "content"}
        [nav/bar]
-       [show-panel @active-panel]
+       [:content {:className "main-content"}
+        [show-panel @active-panel]]
        [footer/bar]])))
