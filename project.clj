@@ -1,10 +1,12 @@
 (defproject webman "0.3.1"
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.908"]
-                 [reagent "0.8.0-alpha1"]
-                 [re-frame "0.10.1"]
-                 [re-frisk "0.4.5"]
-                 [secretary "1.2.3"]]
+                 [org.clojure/clojurescript "1.10.238"]
+                 [reagent               "0.8.0"]
+                 [re-frame              "0.10.5"]
+                 ;;[cljs-ajax             "0.7.3"]
+                 [day8.re-frame/http-fx "0.1.6"]
+                 [re-frisk              "0.4.5"]
+                 [secretary             "1.2.3"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-less "1.7.5"]
@@ -26,13 +28,13 @@
 
   :profiles
   {:dev
-   {:dependencies [[binaryage/devtools "0.9.4"]
-                   [figwheel-sidecar "0.5.13"]
+   {:dependencies [[binaryage/devtools      "0.9.4"]
+                   [figwheel-sidecar        "0.5.13"]
                    [com.cemerick/piggieback "0.2.1"]]
 
     :plugins      [[lein-figwheel "0.5.13"]
-                   [lein-doo "0.1.7"]]
-    }}
+                   [lein-doo "0.1.7"]]}}
+
 
   :cljsbuild
   {:builds
@@ -45,8 +47,8 @@
                     :asset-path           "js/compiled/out"
                     :source-map-timestamp true
                     :preloads             [devtools.preload]
-                    :external-config      {:devtools/config {:features-to-install :all}}
-                    }}
+                    :external-config      {:devtools/config {:features-to-install :all}}}}
+
 
     {:id           "min"
      :source-paths ["src/cljs"]
@@ -62,7 +64,4 @@
      :compiler     {:main          webman.runner
                     :output-to     "resources/public/js/compiled/test.js"
                     :output-dir    "resources/public/js/compiled/test/out"
-                    :optimizations :none}}
-    ]}
-
-  )
+                    :optimizations :none}}]})
