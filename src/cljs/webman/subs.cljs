@@ -9,7 +9,6 @@
    (:active-panel db)))
 
 (re-frame/reg-sub
- :posts
+ :topics
  (fn [db _]
-   (js/console.log "posts")
-   (:posts db)))
+   (:topics db)))

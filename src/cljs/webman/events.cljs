@@ -14,20 +14,25 @@
    (assoc db :active-panel active-panel)))
 
 (re-frame/reg-event-fx
-  :fetch-posts
+  :fetch-topics
   (fn [{:keys [db]} _]
     {:db   (assoc db :loading true)
      :http-xhrio {:method          :get
-                  :uri             "https://devheroes.club/latest.json?api_key=2d153df0001826d7920ad53f56f1ad0ffa0eae9fe3eb338e349b62f18825cc97"
+                  :uri             "https://devheroes.club/c/general.json"
+                  :params          {:api_key "ce750ba7598d400bd087aa443397e9a632dfa96df1192b4489c6f7422055bb7d"
+                                    :api_username "webman"
+                                    :page 1}
                   :timeout         8000
                   :response-format (ajax/json-response-format {:keywords? true})
-                  :on-success      [:populate-posts]
+                  :on-success      [:populate-topics]
                   :on-failure      [:failed-to-fetch]}}))
 
 (re-frame/reg-event-db
- :populate-posts
- (fn [db [_ posts]]
-   (assoc db :posts posts)))
+ :populate-topics
+ (fn [db [_ topics]]
+   (assoc db
+          :topics  (:topics (:topic_list (js->clj topics)))
+          :loading false)))
 
 (re-frame/reg-event-db
  :failed-to-fetch

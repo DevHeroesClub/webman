@@ -2,16 +2,20 @@
   (:require [re-frame.core :as re-frame]
             [webman.config :as config]))
 
-(defn posts-list
-  [posts]
-  (doseq [post posts]
-    [:h2 (:title post)]))
+(defn topic-list
+  [topics]
+  [:ul
+   (for [topic topics]
+     ^{:key topic}
+     [:li
+      [:h2 (:title topic)]])])
+
 (defn index
   "Renders the home page"
   []
-  (re-frame/dispatch [:fetch-posts])
-  (let [posts (re-frame/subscribe [:posts])]
+  (re-frame/dispatch [:fetch-topics])
+  (let [topics (re-frame/subscribe [:topics])]
     [:div
      [:h1 "Posts"]
      [:article
-      [posts-list @posts]]]))
+      [topic-list @topics]]]))
