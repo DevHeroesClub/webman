@@ -2,20 +2,24 @@
   (:require [re-frame.core :as re-frame]
             [webman.config :as config]))
 
+
 (defn topic-list
+  "Renders a list of topics"
   [topics]
-  [:ul
+  [:ul {:className "topic-list"}
    (for [topic topics]
      ^{:key topic}
-     [:li
+     [:li {:className "topic"}
       [:h2 (:title topic)]])])
+
 
 (defn index
   "Renders the home page"
   []
   (re-frame/dispatch [:fetch-topics])
-  (let [topics (re-frame/subscribe [:topics])]
+  (let [topics   (re-frame/subscribe [:topics])]
+
     [:div
-     [:h1 "Posts"]
+     [:h1 "Latest news"]
      [:article
       [topic-list @topics]]]))

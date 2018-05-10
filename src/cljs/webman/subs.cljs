@@ -12,3 +12,8 @@
  :topics
  (fn [db _]
    (:topics db)))
+
+(re-frame/reg-sub
+ :loading?
+ (fn [db _]
+   (:loading db)))

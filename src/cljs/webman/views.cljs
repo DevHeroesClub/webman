@@ -1,6 +1,9 @@
 (ns webman.views
-  (:require [re-frame.core :as re-frame]
-            [webman.views.home :as home]))
+  (:require
+   [re-frame.core        :as re-frame]
+   [webman.views.home    :as home]
+   [webman.views.footer  :as footer]
+   [webman.views.nav     :as nav]))
 
 (defn- panels [panel-name]
   (case panel-name
@@ -13,4 +16,7 @@
 (defn main-panel []
   (let [active-panel (re-frame/subscribe [:active-panel])]
     (fn []
-      [show-panel @active-panel])))
+      [:div {:className "content"}
+       [nav/bar]
+       [show-panel @active-panel]
+       [footer/bar]])))
