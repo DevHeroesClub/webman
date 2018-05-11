@@ -27,12 +27,27 @@
                   :on-success      [:populate-topics]
                   :on-failure      [:failed-to-fetch]}}))
 
+(defn  process-topic
+  "Find the user details for the owner in the users list and
+  embbed it in the topic map."
+  [acc topic]
+  (let [topics   (or (:topics acc) [])
+        owner    (first (:posters topic))
+        user     (first (filter #(= (:id %) (:user_id owner)) (:users acc)))]
+    (assoc acc
+           :topics
+           (conj topics (assoc topic :user user)))))
+
 (re-frame/reg-event-db
  :populate-topics
- (fn [db [_ topics]]
-   (assoc db
-          :topics  (:topics (:topic_list (js->clj topics)))
-          :loading false)))
+ (fn [db [_ result]]
+   (let [topics (js->clj result)
+         posts  (reduce process-topic
+                        topics
+                        (:topics (:topic_list topics)))]
+     (assoc db
+            :topics (:topics posts)
+            :loading false))))
 
 (re-frame/reg-event-db
  :failed-to-fetch

@@ -6,3 +6,4 @@ out
 resources/public/css/
 tmp/
 .nrepl-port
+.sass-cache/

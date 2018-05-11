@@ -4,6 +4,7 @@
                  [reagent               "0.8.0"]
                  [re-frame              "0.10.5"]
                  [day8.re-frame/http-fx "0.1.6"]
+                 [com.taoensso/tempura  "1.2.1"]
                  [secretary             "1.2.3"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]

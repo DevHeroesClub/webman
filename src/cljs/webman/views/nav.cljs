@@ -7,9 +7,17 @@
 
 (defn bar
   []
-  [:nav {:className "navbar"}
-   [:ul {:className "navbar-list"}
-    (for [item menu-items]
-      ^{:key item}
-      [:li {:className "item"}
-       [:a {:href (:href item)} (:name item)]])]])
+  [:nav {:className "navbar is-dark"
+         :role "navigation"
+         :aria-label "main navigation"}
+   [:div {:className :navbar-brand}
+    [:a {:href "#"
+         :className "navbar-item"}
+     "SITE_TITLE"]]
+   [:div {:className "navbar-menu"}
+    [:div {:className "navbar-end"}
+     (for [item menu-items]
+       ^{:key item}
+       [:a {:className "navbar-item"
+            :href (:href item)} (:name item)])]
+    [:div {:className "navbar-start"}]]])

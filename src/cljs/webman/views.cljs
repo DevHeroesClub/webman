@@ -13,11 +13,21 @@
 (defn show-panel [panel-name]
   [panels panel-name])
 
+
+(defn hero
+  []
+  [:section {:className "hero is-medium is-light is-bold"}
+   [:div {:className "hero-body"}
+    [:div {:className "container"}
+     [:p {:className :title} "SITE_TITLE"]
+     [:p {:className :subtitle} "SITE_SUBTITLE"]]]])
+
 (defn main-panel []
   (let [active-panel (re-frame/subscribe [:active-panel])]
     (fn []
-      [:div {:className "content"}
+      [:div {:className ""}
        [nav/bar]
-       [:content {:className "main-content"}
+       [hero]
+       [:div {:className "container"}
         [show-panel @active-panel]]
        [footer/bar]])))
