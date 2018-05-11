@@ -39,13 +39,13 @@
   :aliases {"sass" ["shell" "sass" "--watch" "-Isass/" "--sourcemap=file" "sass/web.sass:resources/public/css/web.css"]
             "sass-compile" ["shell" "sass" "-t compressed" "sass/web.sass:resources/public/css/web.css"]}
 
+
   :cljsbuild
   {:builds
    [{:id           "dev"
      :source-paths ["src/cljs"]
 
-     :figwheel     {:on-jsload "webman.core/mount-root"
-                    :css-dirs ["resources/public/css"]}
+     :figwheel     {:on-jsload "webman.core/mount-root"}
 
      :compiler     {:main                 webman.core
                     :preloads             [devtools.preload
