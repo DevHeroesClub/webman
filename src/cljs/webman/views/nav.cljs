@@ -9,9 +9,7 @@
 
 (defn bar
   []
-  [:nav {:className "navbar is-info is-fixed-top"
-         :role "navigation"
-         :aria-label "main navigation"}
+  [:nav {:className "navbar is-success is-fixed-top"}
    [:div {:className :navbar-brand}
     [:a {:href "#"
          :className "navbar-item"}
