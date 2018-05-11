@@ -18,10 +18,9 @@
   (fn [{:keys [db]} _]
     {:db   (assoc db :loading true)
      :http-xhrio {:method          :get
-                  :uri             "https://devheroes.club/c/general.json"
-                  :params          {:api_key "4b971bf2488e0901402faa2dc238e1a42c0eac4aa6e28108114823273929eeea"
-                                    :api_username "webman"
-                                    :page 1}
+                  :uri             "https://devheroes.club/c/offtopic/l/latest.json"
+                  :params          {:api_key "4b971bf2488e0901402faa2dc238e1a42c0eac4aa6e28108114823273929eeea"}
+
                   :timeout         8000
                   :response-format (ajax/json-response-format {:keywords? true})
                   :on-success      [:populate-topics]

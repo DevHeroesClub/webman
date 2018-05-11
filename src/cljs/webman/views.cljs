@@ -16,7 +16,7 @@
 
 (defn hero
   []
-  [:section {:className "hero is-medium is-light is-bold"}
+  [:section {:className "hero is-medium is-info "}
    [:div {:className "hero-body"}
     [:div {:className "container"}
      [:p {:className :title} "SITE_TITLE"]
@@ -25,7 +25,7 @@
 (defn main-panel []
   (let [active-panel (re-frame/subscribe [:active-panel])]
     (fn []
-      [:div {:className ""}
+      [:span
        [nav/bar]
        [hero]
        [:div {:className "container"}

@@ -1,13 +1,15 @@
-(ns webman.views.nav)
+(ns webman.views.nav
+  (:require
+   [webman.i18n :refer [t]]))
 
 ;; TODO: replace menu with a build time configuration.
 
 (def menu-items
-  [{:name "صفحه اصلی" :href "#"}])
+  [{:name (t [:home_page "Home"]) :href "#"}])
 
 (defn bar
   []
-  [:nav {:className "navbar is-dark"
+  [:nav {:className "navbar is-info is-fixed-top"
          :role "navigation"
          :aria-label "main navigation"}
    [:div {:className :navbar-brand}

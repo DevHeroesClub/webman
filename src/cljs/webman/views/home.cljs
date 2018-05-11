@@ -40,10 +40,19 @@
       [:nav {:className "level is-mobile"}
        [:div {:className :level-left}
         [:span {:className :level-item}
+         [:span {:className "icon"}
+          [:i {:className "fas fa-eye"}]]
          (->persian (:views topic))]
+
         [:span {:className :level-item}
+         [:span {:className "icon"}
+          [:i {:className "fas fa-clock"}]]
          (->persian (time/->human (:created_at topic)))]
+
         [:span {:className :level-item}
+         [:span {:className "icon has-text-danger"}
+          [:i {:className "fas fa-heart"}]]
+
          (->persian (:like_count topic))]]]]]))
 
 (defn topic-list
@@ -51,8 +60,10 @@
   [topics]
   [:div {:className "container"}
    (for [topic topics]
-     ^{:key (:id topic)}
-     [render-topic topic])])
+     (when (and (not (:pinned topic))
+                (:visible topic))
+       ^{:key (:id topic)}
+       [render-topic topic]))])
 
 (defn index
   "Renders the home page"
