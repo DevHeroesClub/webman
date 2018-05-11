@@ -2,6 +2,7 @@
   (:require
    [re-frame.core :as re-frame]
    [webman.config :as config]
+   [webman.time   :as time]
    [webman.i18n   :refer [t]]))
 
 (def digits
@@ -41,7 +42,7 @@
         [:span {:className :level-item}
          (->persian (:views topic))]
         [:span {:className :level-item}
-         (->persian (:created_at topic))]
+         (->persian (time/->human (:created_at topic)))]
         [:span {:className :level-item}
          (->persian (:like_count topic))]]]]]))
 
