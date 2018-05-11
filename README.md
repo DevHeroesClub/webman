@@ -15,6 +15,15 @@ Put this in your Emacs config file:
 
 Navigate to a clojurescript file and start a figwheel REPL with `cider-jack-in-clojurescript` or (`C-c M-J`)
 
+if you want to run the server on your terminal instead of Emacs just do as follows:
+
+```
+$ lein figwheel dev
+```
+
+in bother cases you should be able to connect to [http://localhost:3449](http://localhost:3449)
+
+
 ### Compile css:
 
 Compile css file once.
