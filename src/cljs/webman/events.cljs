@@ -19,7 +19,7 @@
     {:db   (assoc db :loading true)
      :http-xhrio {:method          :get
                   :uri             "https://devheroes.club/c/general.json"
-                  :params          {:api_key "ce750ba7598d400bd087aa443397e9a632dfa96df1192b4489c6f7422055bb7d"
+                  :params          {:api_key "4b971bf2488e0901402faa2dc238e1a42c0eac4aa6e28108114823273929eeea"
                                     :api_username "webman"
                                     :page 1}
                   :timeout         8000
