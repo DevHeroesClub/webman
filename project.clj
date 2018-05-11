@@ -7,8 +7,8 @@
                  [secretary             "1.2.3"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]
-            [lein-less "1.7.5"]
-            [lein-sassy "1.0.8"]]
+            [lein-shell "0.5.0"]
+            [lein-less "1.7.5"]]
 
   :min-lein-version "2.5.3"
 
@@ -36,11 +36,17 @@
                    [lein-doo "0.1.7"]]}}
 
 
+  :aliases {"sass" ["shell" "sass" "--watch" "-Isass/" "--sourcemap=file" "sass/web.sass:resources/public/css/web.css"]
+            "sass-compile" ["shell" "sass" "-t compressed" "sass/web.sass:resources/public/css/web.css"]}
+
   :cljsbuild
   {:builds
    [{:id           "dev"
      :source-paths ["src/cljs"]
-     :figwheel     {:on-jsload "webman.core/mount-root"}
+
+     :figwheel     {:on-jsload "webman.core/mount-root"
+                    :css-dirs ["resources/public/css"]}
+
      :compiler     {:main                 webman.core
                     :preloads             [devtools.preload
                                            re-frisk.preload
