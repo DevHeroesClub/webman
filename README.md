@@ -5,17 +5,10 @@ but different content using one build process.
 
 ## Development Mode
 
-### Start Cider from Emacs:
+If you use Emacs, navigate to a clojurescript file and start a figwheel REPL with `cider-jack-in-clojurescript` or (`C-c M-J`).
 
-Put this in your Emacs config file:
 
-```
-(setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
-```
-
-Navigate to a clojurescript file and start a figwheel REPL with `cider-jack-in-clojurescript` or (`C-c M-J`)
-
-if you want to run the server on your terminal instead of Emacs just do as follows:
+If you want to run the server on your terminal instead of Emacs just do as follows:
 
 ```
 $ lein figwheel dev
@@ -26,28 +19,11 @@ in bother cases you should be able to connect to [http://localhost:3449](http://
 
 ### Compile css:
 
-Compile css file once.
+Compile css file automatically.
 
 ```
-lein less once
+lein sass
 ```
-
-Automatically recompile css file on change.
-
-```
-lein less auto
-```
-
-### Run application:
-
-```
-lein clean
-lein figwheel dev
-```
-
-Figwheel will automatically push cljs changes to the browser.
-
-Wait a bit, then browse to [http://localhost:3449](http://localhost:3449).
 
 ### Run tests:
 
