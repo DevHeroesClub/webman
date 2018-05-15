@@ -1,6 +1,8 @@
 (ns webman.views.nav
   (:require
-   [webman.i18n :refer [t]]))
+   [webman.i18n :refer [t]])
+  (:require-macros
+   [webman.website :refer [get-config]]))
 
 ;; TODO: replace menu with a build time configuration.
 
@@ -13,7 +15,7 @@
    [:div {:className :navbar-brand}
     [:a {:href "#"
          :className "navbar-item"}
-     "SITE_TITLE"]]
+     (get-config :title)]]
    [:div {:className "navbar-menu"}
     [:div {:className "navbar-end"}
      (for [item menu-items]

@@ -52,11 +52,15 @@
                     :preloads             [devtools.preload
                                            re-frisk.preload
                                            day8.re-frame-10x.preload]
-                    :closure-defines      {"re_frame.trace.trace_enabled_QMARK_" true}
                     :output-to            "resources/public/js/compiled/app.js"
                     :output-dir           "resources/public/js/compiled/out"
                     :asset-path           "js/compiled/out"
                     :source-map-timestamp true
+
+                    :closure-defines {goog.DEBUG                            true
+                                      "re_frame.trace.trace_enabled_QMARK_" true
+                                      "webman.views.home.version"           "dev"}
+
                     :external-config      {:devtools/config {:features-to-install :all}}}}
 
 
