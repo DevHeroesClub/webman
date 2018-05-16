@@ -15,7 +15,6 @@
   of the left side of navigation menu"
   (:right (get-config :navbar-menu)))
 
-
 (defn bar
   "Top navigation menu."
   []
@@ -30,7 +29,7 @@
 
      (for [item left-side-menu-items]
        ^{:key item}
-       [:a {:className "navbar-item"}
+       [:div {:className "navbar-item"}
         [:a {:className (:class item)
              :href      (:href item)}]
         (when (:icon item)

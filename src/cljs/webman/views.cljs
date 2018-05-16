@@ -4,10 +4,17 @@
    [webman.views.home    :as home]
    [webman.views.footer  :as footer]
    [webman.i18n          :refer [t]]
-   [webman.views.nav     :as nav]))
+   [webman.views.nav     :as nav])
+  (:require-macros [webman.website :refer [for-current-website]]))
 
-(defn- panels [panel-name]
-  (case panel-name
+
+;; (defn- panels [panel-name]
+;;   (for-current-website panel-name
+;;                        :about [:h1 "about"]
+;;                        [:div]))
+
+(defn- panels [panel]
+  (case panel
     :home-panel [home/index]
     [:div]))
 
