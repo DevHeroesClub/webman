@@ -26,11 +26,10 @@
   []
   [:section {:className "hero is-medium is-success"}
    [:div {:className :hero-body}
-    [:div {:className "container has-text-centered"}
-     [:p {:className :title} "SITE_TITLE"]
-     [:p {:className :subtitle} "SITE_SUBTITLE"]
-     [:a {:className "button is-inverted  is-link is-outlined is-large" :href "#"}
-      (t [:get_started "Get Started"])]]]])
+    [:div {:className "container has-text-left"}
+     [:h2 {:className :title} "WELCOME_TITLE"]
+     [:p {:className :subtitle} "WELCOME_MESSAGE"]]]])
+
 
 (defn main-panel []
   (let [active-panel (re-frame/subscribe [:active-panel])]

@@ -41,7 +41,7 @@
         [:h5 {:className "topic-name"} (:title topic)]]]
 
       [:nav {:className "level is-mobile"}
-       [:div {:className :level-left}
+       [:div {:className :level-right}
         [:span {:className :level-item}
          [:span {:className "icon"}
           [:i {:className "fas fa-eye"}]]
