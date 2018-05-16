@@ -1,0 +1,14 @@
+{
+ ;; Site's title
+ :title "رادیو بوت"
+ ;; Site's subtitle
+ :subtitle "رادیو بوت، به بهانه تکنولوژی"
+ :welcome-message "رادیو بوت یک رادیوی اینترنتی در حوزه فناوری اطلاعات است که در سال ۱۳۹۳ شروع به فعالیت نموده و به صورت نامنظم منتشر می‌شود.در این پادکست در تلاش هستیم تجربیات خود را با علاقه‌مندان به اشتراک بگذاریم"
+ ;; navigation menu at the top
+
+ ;; IMPORTANT NOTE: :name property of a linke should be a vector
+ ;; even if you want it to be empty it should be an empty vector
+ :navbar-menu {:left [{:name [:home_page "خانه"] :href "/"}
+                      {:name [:about_us  "درباره ما"] :href "/about"}]
+
+               :right [{:name [] :href "/" :icon "fas fa-user" :class "button" :type :button}]}}

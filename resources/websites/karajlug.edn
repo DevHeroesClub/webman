@@ -1,0 +1,16 @@
+{
+ ;; Site's title
+ :title "کرج لاگ"
+ ;; Site's subtitle
+ :subtitle "گروه کاربران لینوکس کرج"
+ :welcome-message " کرج‌لاگ اجتماع آزادی از دوست‌داران گنو/لینوکس است که بیشتر در شهر کرج زندگی می‌کنند. ما به گرمی به کسانی که تمایل دارند به اجتماع ما بپیوند، خوش‌آمد می‌گوییم.
+ما معمولاً هر دو هفته دیدار داریم و دربارهٔ گنو/لینوکس و فن‌آوری‌های روز دنیای لینوکس صحبت می‌کنیم. در کرج لاگ ما به جای فقط صحبت‌کردن و حرف‌زدن به عمل‌کردن معتقد هستیم و بر روی تعدادی پروژه نیز با همدیگر همکاری داریم.جلسات کرج لاگ رایگان و شرکت برای کلیه عموم علاقه‌مندان آزاد می‌باشد"
+ ;; navigation menu at the top
+
+ ;; IMPORTANT NOTE: :name property of a linke should be a vector
+ ;; even if you want it to be empty it should be an empty vector
+ :navbar-menu {:left [{:name [:home_page "خانه"] :href "/"}
+                      {:name [:sessions "رویدادها"] :href "https://evand.com/events/karaj-lug"}
+                      {:name [:about_us  "درباره ما"] :href "/about"}]
+
+               :right [{:name [] :href "/" :icon "fas fa-user" :class "button" :type :button}]}}
