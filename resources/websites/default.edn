@@ -1,4 +1,6 @@
 {
+ :home-fn [home/index]
+
  ;; Site's title
  :title "TITLE"
  ;; Site's subtitle
@@ -9,6 +11,13 @@
  ;; IMPORTANT NOTE: :name property of a linke should be a vector
  ;; even if you want it to be empty it should be an empty vector
  :navbar-menu {:left [{:name [:home_page "Home"] :href "/"}
-                      {:name [:about_us  "About Us"] :href "/about"}]}}
+                      {:name [:about_us  "About Us"] :href "/about"}]
 
-               :right [{:name [] :href "/" :icon "fas fa-user" :class "button" :type :button}]
+               :right [{:name [] :href "/" :icon "fas fa-user" :class "button" :type :button}]}
+
+ :welcome-title "Welcome title"
+ :welcome-message "welcome message"
+
+ :footer [:p [:a {:href "#"} "devheroes"] "somethin"]
+
+ :news-title (t [:latest-news "Latest news1"])}

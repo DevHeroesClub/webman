@@ -20,14 +20,12 @@
   []
   [:nav {:className "navbar is-success is-fixed-top"}
    [:div {:className :navbar-brand}
-    [:a {:href "#"
+    [:a {:href "/"
          :className "navbar-item"}
      (get-config :title)]]
 
    [:div {:className "navbar-menu"}
     [:div {:className "navbar-end"}
-     [:h1 {:className :header} "SITE_TITLE"]
-     [:h6 {:className :subheader} "SITE_SUBTITLE"]
      (for [item left-side-menu-items]
        ^{:key item}
        [:div {:className "navbar-item"}

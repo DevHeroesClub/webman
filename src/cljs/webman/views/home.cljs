@@ -68,6 +68,7 @@
        ^{:key (:id topic)}
        [render-topic topic]))])
 
+
 (defn index
   "Renders the home page"
   []
@@ -77,6 +78,6 @@
      [:div {:className "container"}
       [:div {:className "columns"}
        [:div {:className "column"}
-        [:h1 {:className "title"} (t [:latest-news]) ":"]
+        [:h1 {:className "title"} (get-config :news-title)]
         [:article {:className "news"}
          [topic-list @topics]]]]]]))

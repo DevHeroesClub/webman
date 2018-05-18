@@ -5,7 +5,7 @@
    [webman.views.footer  :as footer]
    [webman.i18n          :refer [t]]
    [webman.views.nav     :as nav])
-  (:require-macros [webman.website :refer [for-current-website]]))
+  (:require-macros [webman.website :refer [get-config]]))
 
 
 ;; (defn- panels [panel-name]
@@ -13,9 +13,10 @@
 ;;                        :about [:h1 "about"]
 ;;                        [:div]))
 
+
 (defn- panels [panel]
   (case panel
-    :home-panel [home/index]
+    :home-panel (get-config :home-fn)
     [:div]))
 
 (defn show-panel [panel-name]
@@ -26,10 +27,11 @@
   []
   [:section {:className "hero is-medium is-success"}
    [:div {:className :hero-body}
-    [:div {:className "container has-text-left"}
-     [:h2 {:className :title} "WELCOME_TITLE"]
-     [:p {:className :subtitle} "WELCOME_MESSAGE"]]]])
-
+    [:div {:className "container has-text-right"}
+     [:h2 {:className :title}
+      (get-config :welcome-title)]
+     [:p {:className :subtitle}
+      (get-config :welcome-message)]]]])
 
 (defn main-panel []
   (let [active-panel (re-frame/subscribe [:active-panel])]
