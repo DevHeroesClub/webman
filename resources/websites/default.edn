@@ -1,6 +1,6 @@
 {
  :home-fn [home/index]
-
+ :logo "images/me-1.jpg"
  ;; Site's title
  :title "TITLE"
  ;; Site's subtitle

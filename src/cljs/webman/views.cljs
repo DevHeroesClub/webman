@@ -28,10 +28,13 @@
   [:section {:className "hero is-medium is-success"}
    [:div {:className :hero-body}
     [:div {:className "container has-text-right"}
+     [:img {:className :logo :src (get-config :logo)}]
+
      [:h2 {:className :title}
       (get-config :welcome-title)]
      [:p {:className :subtitle}
       (get-config :welcome-message)]]]])
+
 
 (defn main-panel []
   (let [active-panel (re-frame/subscribe [:active-panel])]
