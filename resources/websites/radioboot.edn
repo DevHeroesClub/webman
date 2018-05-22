@@ -11,11 +11,13 @@
  :welcome-image "/images/radioboot/welcome.png"
 
  :header-color "#f5f5f5"
+
+ :news-title "آخرین پادکست ها"
+
  ;; navigation menu at the top
 
  ;; IMPORTANT NOTE: :name property of a linke should be a vector
  ;; even if you want it to be empty it should be an empty vector
- :navbar-menu {:left [{:name [:home_page "خانه"] :href "/"}
-                      {:name [:about_us  "درباره ما"] :href "/about"}]
+ :navbar-menu {:left [{:name [:about_us  "درباره ما"] :href "/about" :class "navbar-item"}]
 
-               :right [{:name [] :href "/" :icon "fas fa-twitter"}]}}
+               :right [{:name [] :href "/" :icon "fab fa-twitter fa-lg"}]}}

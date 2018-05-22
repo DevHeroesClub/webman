@@ -28,19 +28,19 @@
     [:div {:className "navbar-end"}
      (for [item left-side-menu-items]
        ^{:key item}
-       [:div {:className "navbar-item"}
-        [:a {:className (:class item)
-             :href      (:href item)}]
+
+       [:a {:className (:class item)
+            :href      (:href item)}
         (when (:icon item)
           [:i {:className (:icon item)}])
         (t (:name item))])]
 
+
     [:div {:className "navbar-start"}
      (for [item right-side-menu-items]
        ^{:key item}
-       [:div {:className   "navbar-item"}
-        [:a {:className  (str "navbar-item " (:class item))
-             :href       (:href item)}
-         (when (:icon item)
-           [:i {:className (:icon item)}])
-         (t (:name item))]])]]])
+       [:a {:className  (str "navbar-item " (:class item))
+            :href       (:href item)}
+        (when (:icon item)
+          [:i {:className (:icon item)}])
+        (t (:name item))])]]])

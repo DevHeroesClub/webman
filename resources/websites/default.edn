@@ -20,4 +20,4 @@
 
  :footer [:p [:a {:href "#"} "devheroes"] "somethin"]
 
- :news-title (t [:latest-news "Latest news1"])}
+ :news-title (t [:latest-news "Latest news"])}
