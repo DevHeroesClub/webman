@@ -7,3 +7,4 @@ resources/public/css/
 tmp/
 .nrepl-port
 .sass-cache/
+.rebel_readline_history
