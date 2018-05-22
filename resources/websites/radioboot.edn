@@ -1,4 +1,6 @@
 {
+
+ :latest-posts-url "/c/general/radioboot/l/latest.json"
  ;; Site's title
  :title "رادیو بوت"
  ;; Site's subtitle

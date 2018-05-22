@@ -1,5 +1,8 @@
 {
  :home-fn [home/index]
+ :api-base-url "https://devheroes.club"
+ :latest-posts-url "/c/offtopic/l/latest.json"
+
  :logo #asset "images/me-1.jpg"
  ;; Site's title
  :title "TITLE"

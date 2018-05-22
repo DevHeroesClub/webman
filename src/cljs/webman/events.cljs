@@ -1,7 +1,9 @@
 (ns webman.events
   (:require [re-frame.core :as re-frame]
             [ajax.core     :as ajax]
-            [webman.db     :as db]))
+            [webman.db     :as db]
+            [webman.config :as config]))
+
 
 (re-frame/reg-event-db
  :initialize-db
@@ -16,11 +18,12 @@
 (re-frame/reg-event-fx
   :fetch-topics
   (fn [{:keys [db]} _]
+    (js/console.log "asdasdasdas")
+    (js/console.log (config/latest-posts-url))
     {:db   (assoc db :loading true)
      :http-xhrio {:method          :get
-                  :uri             "https://devheroes.club/c/offtopic/l/latest.json"
+                  :uri             (config/latest-posts-url)
                   :params          {:api_key "4b971bf2488e0901402faa2dc238e1a42c0eac4aa6e28108114823273929eeea"}
-
                   :timeout         8000
                   :response-format (ajax/json-response-format {:keywords? true})
                   :on-success      [:populate-topics]
