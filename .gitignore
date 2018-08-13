@@ -8,3 +8,4 @@ tmp/
 .nrepl-port
 .sass-cache/
 .rebel_readline_history
+.lein-repl-history

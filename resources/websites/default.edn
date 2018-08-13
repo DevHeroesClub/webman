@@ -13,10 +13,8 @@
 
  ;; IMPORTANT NOTE: :name property of a linke should be a vector
  ;; even if you want it to be empty it should be an empty vector
- :navbar-menu {:left [{:name [:home_page "Home"] :href "/"}
-                      {:name [:about_us  "About Us"] :href "/about"}]
-
-               :right [{:name [] :href "/" :icon "fas fa-user" :class "button" :type :button}]}
+ :navbar-menu {:left [{:name [:about_us  "درباره ما"] :href "/about" :class "navbar-item"}]
+               :right [{:name [] :href "//twitter.com/devheroes_club" :icon "fab fa-twitter fa-lg"}]}
 
  :welcome-title "Welcome title"
  :welcome-message "welcome message"
