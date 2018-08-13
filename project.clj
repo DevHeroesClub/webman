@@ -37,8 +37,13 @@
                    [lein-doo "0.1.7"]]}}
 
 
-  :aliases {"sass" ["shell" "sass" "--watch" "-Isass/" "--sourcemap=file" "sass/web.sass:resources/public/css/web.css"]
-            "sass-compile" ["shell" "sass" "-t compressed" "sass/web.sass:resources/public/css/web.css"]}
+  :aliases {"sass" ["shell" "sass" "--watch" "-Isass/" "--sourcemap=file"
+                    ~(clojure.core/format "sass/%s.sass:resources/public/css/web.css"
+                                          (or (System/getenv "WEBMAN_WEBSITE")
+                                              "web"))]
+            "sass-compile" ["shell" "sass" "-t compressed" ~(clojure.core/format "sass/%s.sass:resources/public/css/web.css"
+                                                                                 (or (System/getenv "WEBMAN_WEBSITE")
+                                                                                     "web"))]}
 
 
   :cljsbuild
