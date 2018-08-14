@@ -18,22 +18,27 @@
 (defn bar
   "Top navigation menu."
   []
-  [:nav {:className "navbar is-success is-fixed-top"}
-   [:div {:className :navbar-brand}
-    [:a {:href "/"
-         :className "navbar-item"}
-     (get-config :title)]]
+  [:nav {:className "navbar is-success is-fixed-top is-spaced"}
+   [:div {:className "container"}
 
-   [:div {:className "navbar-menu"}
+    ;; TODO: Add logo image in navbar-brand
+    [:div {:className :navbar-brand}]
+
     [:div {:className "navbar-end"}
+     [:a {:href "/"
+          :className "navbar-item"}
+      [:span
+       (get-config :title)]]
+
      (for [item left-side-menu-items]
        ^{:key item}
 
        [:a {:className (:class item)
             :href      (:href item)}
-        (when (:icon item)
-          [:i {:className (:icon item)}])
-        (t (:name item))])]
+        [:span
+         (when (:icon item)
+           [:i {:className (:icon item)}])
+         (t (:name item))]])]
 
 
     [:div {:className "navbar-start"}

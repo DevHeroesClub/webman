@@ -12,10 +12,9 @@
   {'asset asset})
 
 (defn website-name
-  ([] (website-name "default"))
+  ([] (website-name "iranclojure.ir"))
   ([default]
    (or (System/getenv "WEBMAN_WEBSITE") default)))
-
 
 (defmacro get-config
   [key]

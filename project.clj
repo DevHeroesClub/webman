@@ -1,7 +1,7 @@
 (defproject webman "0.3.1"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.10.238"]
-                 [reagent               "0.8.0"]
+                 [reagent               "0.8.1"]
                  [re-frame              "0.10.5"]
                  [day8.re-frame/http-fx "0.1.6"]
                  [com.taoensso/tempura  "1.2.1"]
@@ -28,10 +28,10 @@
   :profiles
   {:dev
    {:dependencies [[binaryage/devtools      "0.9.10"]
-                   [re-frisk                "0.5.3"]
+                   [re-frisk                "0.5.4"]
                    [figwheel-sidecar        "0.5.16"]
-                   [day8.re-frame/re-frame-10x "0.3.3-react16"]
-                   [com.cemerick/piggieback "0.2.1"]]
+                   [day8.re-frame/re-frame-10x "0.3.3"]
+                   [com.cemerick/piggieback "0.2.2"]]
 
     :plugins      [[lein-figwheel "0.5.16"]
                    [lein-doo "0.1.7"]]}}

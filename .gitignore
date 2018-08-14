@@ -9,3 +9,4 @@ tmp/
 .sass-cache/
 .rebel_readline_history
 .lein-repl-history
+.lein-failures

@@ -1,0 +1,24 @@
+{
+ :home-fn [home/index]
+ :api-base-url "https://devheroes.club"
+ :latest-posts-url "/c/clojure/l/latest.json"
+
+ :logo #asset "images/iranclojure.png"
+ ;; Site's title
+ :title "ایران کلوژر"
+ ;; Site's subtitle
+ :subtitle "اجتماع برنامه نویسان کلوژر ایرانی"
+
+ ;; navigation menu at the top
+
+ ;; IMPORTANT NOTE: :name property of a linke should be a vector
+ ;; even if you want it to be empty it should be an empty vector
+ :navbar-menu {:left [{:name [:about_us  "درباره ما"] :href "/about" :class "navbar-item"}]
+               :right [{:name [] :href "//twitter.com/devheroes_club" :icon "fab fa-twitter fa-lg"}]}
+
+ :welcome-title "ایران کلوژر"
+ :welcome-message "اجتماع برنامه نویسان کلوژر ایرانی"
+
+ :footer [:p "حقوق این وب سایت نزد"[:a {:href "/"} "ایران کلوژر"] "محفوذ است."]
+
+ :news-title (t [:latest-news "آخرین پست ها"])}

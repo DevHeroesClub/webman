@@ -27,16 +27,17 @@
   []
   [:section {:className "hero is-medium is-light"}
    [:div {:className :hero-body}
-    [:div {:className "columns"}
-     [:div {:className "column is-half"}
-      [:div {:className "has-text-right"}
-       [:h2 {:className :title}
-        (get-config :welcome-title)]
-       [:p {:className :subtitle1}
-        (get-config :welcome-message)]]]
+    [:div {:className "container"}
+     [:div {:className "columns"}
+      [:div {:className "column is-half"}
+       [:div {:className "has-text-right"}
+        [:h2 {:className :title}
+         (get-config :welcome-title)]
+        [:p {:className :subtitle1}
+         (get-config :welcome-message)]]]
 
-     [:div {:className "column is-half has-text-centered"}
-      [:img {:className :logo :src (get-config :logo)}]]]]])
+      [:div {:className "column is-half has-text-centered"}
+       [:img {:className :logo :src (get-config :logo)}]]]]]])
 
 
 (defn main-panel []
